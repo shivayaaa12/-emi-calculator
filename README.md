@@ -1,41 +1,48 @@
-# Loan Ledger — EMI Calculator
+Loan Ledger — EMI Calculator
 
-A clean EMI calculator with a principal-vs-interest breakdown chart, a full month-by-month repayment ledger, and an "extra payment" feature that shows how much interest and time you save.
+A clean, browser-based EMI calculator that shows the full repayment picture — not just one number.
 
-## Before you deploy
+Live Demo: https://emi-calculator-hazel-ten.vercel.app
+GitHub: https://github.com/shivayaaa12/-emi-calculator
 
-Your name (Shivaya Sharma) and email are already filled in on the page. Just double check the "Built for Digital Heroes" button still points to `https://digitalheroesco.com` (it already does — just don't remove it).
+Built for the Digital Heroes developer trial task.
 
-## How to put this on GitHub (free)
+Why I Built This
 
-1. Go to [github.com](https://github.com) → New repository → name it something like `emi-calculator`. Keep it **Public**.
-2. On your computer, in the folder with `index.html`, run:
-   ```
-   git init
-   git add index.html
-   git commit -m "EMI calculator"
-   git branch -M main
-   git remote add origin https://github.com/YOUR-USERNAME/emi-calculator.git
-   git push -u origin main
-   ```
-   (Replace `YOUR-USERNAME` with your actual GitHub username.)
+Most EMI calculators I've used only show the monthly payment. They never show how much of that payment is interest vs. principal, or how much paying extra each month would actually save. This tool fixes that.
 
-   No git installed or unfamiliar with the command line? You can also just create the repo on GitHub's website and use the "upload files" button in the browser to drag `index.html` in directly — no terminal needed.
+Features
 
-## How to deploy on Vercel (free, no card)
 
-1. Go to [vercel.com](https://vercel.com) and sign up using your GitHub account.
-2. Click **Add New → Project**.
-3. Select the `emi-calculator` repo you just pushed.
-4. Framework preset: choose **Other** (it's plain HTML, no build step needed).
-5. Click **Deploy**. Vercel gives you a live URL like `emi-calculator-yourname.vercel.app` in under a minute.
+Instant EMI calculation from loan amount, interest rate, and tenure
+Principal vs. interest breakdown shown as a donut chart
+Full month-by-month repayment ledger (amortization table)
+"Extra payment" mode — shows exact interest and time saved by paying more
+Three color themes: Dark, Light, Blue
+Fully responsive, works on mobile
 
-That's it — no payment screen will appear anywhere in this process.
 
-## What to submit to Digital Heroes
+Tech Stack
 
-- Live Vercel URL
-- Public GitHub repo link
-- Your full name + email
-- One line: "An EMI calculator — I built this because [your real reason, e.g. bank EMI calculators are cluttered with ads and don't show prepayment savings]."
-- A link showing this added to your own portfolio
+Plain HTML, CSS, and JavaScript — no frameworks, no build step, no backend. Everything runs client-side in the browser.
+
+How It Works
+
+EMI is calculated using the standard reducing-balance formula:
+
+EMI = P × r × (1 + r)^n / ((1 + r)^n − 1)
+
+where P is the loan amount, r is the monthly interest rate, and n is the tenure in months. The repayment ledger recalculates this month by month, reducing the balance each time — and applying any extra payment directly to the principal.
+
+Running It Locally
+
+No setup needed — it's a single static file.
+
+
+Clone or download this repo
+Open index.html directly in any browser
+
+
+Built For
+
+This project was built as part of the Digital Heroes developer trial task — a free, no-cost challenge to design, build, and deploy a genuinely useful tool.
